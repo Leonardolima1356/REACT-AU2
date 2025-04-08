@@ -20,7 +20,7 @@ function App() {
   const handleZap = () => {
     const {name, email, message} = formData;
 
-    const urlZAPZAP = `https://api.whatsapp.com/send?phone=${defaultPhoneNumber}$text=
+    const urlZAPZAP = `https://api.whatsapp.com/send?phone=${defaultPhoneNumber}&text=
     Nome.%20${name}%0D%0A
     Email.%20${email}%0D%0A
     Message.%20${message}%0D%0A`
