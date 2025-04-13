@@ -1,22 +1,28 @@
-import photo01 from '../images/v-naruto.jpg'
+import photo01 from '../images/java.png'
+import photo02 from '../images/html.png'
+import photo03 from '../images/css.png'
+import photo04 from '../images/js.png'
+import photo05 from '../images/mysql.png'
+import photo06 from '../images/react.png'
+
 
 export const cards = [
     {
-        text: "primeiro", img: photo01
+        text: "Java", img: photo01
     },
     {
-        text: "segundo", img: photo01
+        text: "HTML", img: photo02
     },
     {
-        text: "terceiro", img: photo01
+        text: "CSS", img: photo03
     },
     {
-        text: "quarto", img: photo01
+        text: "JavaScript", img: photo04
     },
     {
-        text: "quinto", img: photo01
+        text: "MySQL", img: photo05
     },
     {
-        text: "sexto", img: photo01
+        text: "React", img: photo06
     },
 ]

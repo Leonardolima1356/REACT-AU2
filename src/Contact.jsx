@@ -6,26 +6,26 @@ import 'leaflet-defaulticon-compatibility';
 import { Menu } from './components/menu';
 
 function Contact(){
-    const position = [51.505, -0.09]
+    const position = [-25.374493, -49.1895284]
 
-    return(
-        <>
+    return (
+      <>
         <Menu option01="Voltar a página inicial"/>
         <h2 className={style.tt}>contato</h2>
         <br />
-        <MapContainer center={position} zoom={13} scrollWheelZoom={false} style={{width: "100%", height: "900px"}}>
-    <TileLayer
-    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-    />
-    <Marker position={position}>
-      <Popup>
-        A pretty CSS3 popup. <br /> Easily customizable.
-      </Popup>
-    </Marker>
-  </MapContainer>,
-        </>
-    )
-}
-
-export default Contact
+        <MapContainer center={position} zoom={13} scrollWheelZoom={false} style={{ width: "100%", height: "900px" }}>
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Marker position={position}>
+            <Popup>
+              A pretty CSS3 popup. <br /> Easily customizable.
+            </Popup>
+          </Marker>
+        </MapContainer>
+      </>
+    );
+  }
+  
+  export default Contact;

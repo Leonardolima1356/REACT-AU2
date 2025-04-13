@@ -1,13 +1,8 @@
 import style from './menu.module.css'
+import { Link } from 'react-router-dom';
 
 export const Menu = (props) => {
     return(
-        // <nav className={style.navBar}>
-        //     <p><a href="#s1">{props.option01}</a></p>
-        //     <p><a href="#s2">{props.option02}</a></p>
-        //     <p><a href={'/contact'}>{props.option03}</a></p>
-        // </nav>
-
         <nav className={`navbar navbar-expand-lg navbar-dark bg-dark ${style.navBar}`}>
         <div className={"container-fluid"}>
             <button className={"navbar-toggler"} type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,9 +10,16 @@ export const Menu = (props) => {
             </button>
             <div className={"collapse navbar-collapse"} id="navbarNavAltMarkup">
             <div className={"navbar-nav"}>
-                <a className={"nav-link"} href={'/'}>{props.option01}</a>
-                <a className={"nav-link"} href="#s2">{props.option02}</a>
-                <a className={"nav-link"} href={'/Contact'}>{props.option03}</a>
+            <Link className={"nav-link"}  to={'/'}>{props.option01}</Link>
+            {props.option02 && (
+              <a className={"nav-link"} href={"#s2"}>{props.option02}</a>
+            )}
+            {props.option03 && (
+              <a className={"nav-link"} href={"#s3"}>{props.option03}</a>
+            )}
+            {props.option04 && (
+              <Link className={"nav-link"} to={'/contact'}>{props.option04}</Link>
+            )}
             </div>
             </div>
         </div>
